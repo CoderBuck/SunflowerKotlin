@@ -15,8 +15,13 @@
   ~ limitations under the License.
   -->
 
-<resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-</resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/garden_fragment"
+        android:title="@string/my_garden_title"/>
+    <item
+        android:id="@+id/plant_list_fragment"
+        android:title="@string/plant_list_title"/>
+
+</menu>
