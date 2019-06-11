@@ -16,15 +16,17 @@
         android:layout_height="match_parent"
         tools:context=".GardenFragment">
 
+        <!--app:isGone="@{!hasPlantings}"-->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/garden_list"
             android:clipToPadding="false"
-            app:isGone="@{hasPlantings}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:paddingLeft="@dimen/margin_normal"
             android:paddingRight="@dimen/margin_normal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:isGone="@{!hasPlantings}"
+            >
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -32,10 +34,11 @@
             android:id="@+id/empty_garden"
             android:gravity="center"
             android:text="@string/garden_empty"
-            app:isGone="@{hasPlantings}"
             android:textSize="24sp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            app:isGone="@{hasPlantings}"
+            />
 
     </FrameLayout>
 </layout>

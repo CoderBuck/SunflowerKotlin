@@ -15,8 +15,8 @@ class GardenPlantingListViewModel internal constructor(
 
     val gardenPlantings = gardenPlantingRepository.getGardenPlantings()
 
-//    val plantAndGardenPlantings: LiveData<List<PlantAndGardenPlantings>> =
-//        gardenPlantingRepository.getPlantAndGardenPlantings().map { plantings ->
-////            plantings.filter { it.gardenPlantings.isNotEmpty() }
-//        }
+    val plantAndGardenPlantings: LiveData<List<PlantAndGardenPlantings>> =
+        gardenPlantingRepository.getPlantAndGardenPlantings().map { plantings ->
+            plantings.filter { it.gardenPlantings.isNotEmpty() }
+        }
 }
